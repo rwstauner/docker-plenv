@@ -1,0 +1,11 @@
+sudo: required
+
+services:
+  - docker
+
+env:
+  - IMAGE=plenv
+
+script:
+  - docker build -t $IMAGE .
+  - docker run $IMAGE plenv install -l
