@@ -7,6 +7,8 @@ ENV PATH $PLENV_ROOT/bin:$PLENV_ROOT/shims:$PATH
 RUN apk --update add \
     ca-certificates \
     git \
+# git push
+    openssh-client \
 # plenv
     bash \
     perl \
