@@ -21,6 +21,7 @@ RUN apk --update add \
     ncurses-dev \
     readline-dev \
     libressl libressl-dev \
+    zlib-dev \
   && git clone git://github.com/tokuhirom/plenv.git $PLENV_ROOT \
   && git clone git://github.com/tokuhirom/Perl-Build.git $PLENV_ROOT/plugins/perl-build \
   && curl -sL https://cpanmin.us > /usr/local/bin/cpanm \
