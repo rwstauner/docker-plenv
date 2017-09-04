@@ -16,13 +16,15 @@ RUN apk --update add \
 # plenv, cpanm
     curl \
 # compiling perl (and common modules)
-    make gcc libc-dev \
+    build-base \
     linux-headers \
     ncurses-dev \
     readline-dev \
     libressl libressl-dev \
     zlib-dev \
     expat-dev \
+# perl build looks for
+    procps \
   && git clone git://github.com/tokuhirom/plenv.git $PLENV_ROOT \
   && git clone git://github.com/tokuhirom/Perl-Build.git $PLENV_ROOT/plugins/perl-build \
   && curl -sL https://cpanmin.us > /usr/local/bin/cpanm \
