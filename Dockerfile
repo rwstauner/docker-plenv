@@ -23,6 +23,7 @@ RUN apk --update add \
     libressl libressl-dev \
     zlib-dev \
     expat-dev \
+    xmlsec-dev \
 # perl build looks for
     procps \
   && git clone git://github.com/tokuhirom/plenv.git $PLENV_ROOT \
